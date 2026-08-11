@@ -241,12 +241,12 @@ a[href^="tel:"] {
 /* Mobile Responsive Optimization */
 @media (max-width: 640px) {
   .section-container {
-    padding: 34px 14px;
+    padding: 24px 12px;
   }
 
   .gold-border-card {
     border-radius: 18px;
-    margin-bottom: 24px;
+    margin-bottom: 20px;
   }
 
   .gold-border-card::before {
@@ -257,30 +257,47 @@ a[href^="tel:"] {
   .btn-gold, .btn-bronze {
     width: 100%;
     justify-content: center;
-    padding: 14px 18px;
-    font-size: 0.95rem;
+    padding: 13px 18px;
+    font-size: 0.9rem;
   }
 }
 
 @media (max-width: 480px) {
   .section-container {
-    padding: 26px 12px;
+    padding: 18px 10px;
   }
 
   .gold-border-card {
     border-radius: 16px;
-    padding-left: 14px !important;
-    padding-right: 14px !important;
-    margin-bottom: 20px;
+    padding-left: 12px !important;
+    padding-right: 12px !important;
+    margin-bottom: 16px;
   }
 
   .btn-gold, .btn-bronze {
     width: 100%;
     max-width: 100%;
     justify-content: center;
-    padding: 13px 14px;
-    font-size: 0.88rem !important;
+    padding: 12px 14px;
+    font-size: 0.85rem !important;
     letter-spacing: 0.2px;
+  }
+}
+
+@media (max-width: 360px) {
+  .section-container {
+    padding: 14px 8px;
+  }
+
+  .gold-border-card {
+    border-radius: 14px;
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+  }
+
+  .btn-gold, .btn-bronze {
+    padding: 11px 12px;
+    font-size: 0.8rem !important;
   }
 }
 

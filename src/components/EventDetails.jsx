@@ -37,56 +37,56 @@ END:VCALENDAR`;
         transition={{ duration: 0.8, ease: 'easeOut' }}
         className="gold-border-card"
         style={{
-          padding: 'clamp(24px, 5vw, 45px) clamp(14px, 4vw, 30px)',
+          padding: 'clamp(18px, 4vw, 36px) clamp(12px, 3.5vw, 24px)',
           textAlign: 'center',
-          marginBottom: '40px',
+          marginBottom: '30px',
           background: 'linear-gradient(135deg, rgba(35, 6, 15, 0.58), rgba(61, 12, 28, 0.48))'
         }}
       >
-        <p className="font-cinzel" style={{ fontSize: 'clamp(0.8rem, 2.5vw, 0.95rem)', letterSpacing: '2.5px', color: '#D4AF37', marginBottom: '8px', fontWeight: 'bold' }}>
+        <p className="font-cinzel" style={{ fontSize: 'clamp(0.72rem, 2.2vw, 0.88rem)', letterSpacing: '2px', color: '#D4AF37', marginBottom: '6px', fontWeight: 'bold' }}>
           FAMILY & HOMES
         </p>
-        <h2 className="font-cinzel text-gold-gradient" style={{ fontSize: 'clamp(1.6rem, 5vw, 2.4rem)', marginBottom: '30px' }}>
+        <h2 className="font-cinzel text-gold-gradient" style={{ fontSize: 'clamp(1.35rem, 4.5vw, 2.1rem)', marginBottom: '20px' }}>
           Groom &amp; Bride Details
         </h2>
 
         {/* Grid Layout for Groom & Bride Cards */}
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 300px), 1fr))', gap: '24px', marginBottom: '35px' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 280px), 1fr))', gap: '16px', marginBottom: '24px' }}>
           
           {/* Groom Details Card */}
           <div
             style={{
               background: 'linear-gradient(135deg, rgba(61, 12, 28, 0.48), rgba(22, 3, 8, 0.55))',
-              padding: 'clamp(20px, 4vw, 30px)',
-              borderRadius: '18px',
+              padding: 'clamp(16px, 3.5vw, 24px)',
+              borderRadius: '16px',
               border: '1px solid rgba(212, 175, 55, 0.45)',
               textAlign: 'left',
-              boxShadow: '0 12px 30px rgba(0, 0, 0, 0.35)'
+              boxShadow: '0 10px 25px rgba(0, 0, 0, 0.35)'
             }}
           >
-            <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '16px' }}>
-              <div style={{ width: '44px', height: '44px', borderRadius: '50%', background: 'rgba(212, 175, 55, 0.18)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
-                <Users size={22} color="#D4AF37" />
+            <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '12px' }}>
+              <div style={{ width: '38px', height: '38px', borderRadius: '50%', background: 'rgba(212, 175, 55, 0.18)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
+                <Users size={19} color="#D4AF37" />
               </div>
               <div>
-                <span className="font-cinzel" style={{ fontSize: '0.75rem', letterSpacing: '1.5px', color: '#D4AF37', fontWeight: 'bold', display: 'block' }}>GROOM</span>
-                <h3 className="font-cinzel text-gold-gradient" style={{ fontSize: 'clamp(1.3rem, 3.8vw, 1.6rem)', fontWeight: 'bold', margin: 0 }}>
+                <span className="font-cinzel" style={{ fontSize: '0.68rem', letterSpacing: '1px', color: '#D4AF37', fontWeight: 'bold', display: 'block' }}>GROOM</span>
+                <h3 className="font-cinzel text-gold-gradient" style={{ fontSize: 'clamp(1.15rem, 3.5vw, 1.45rem)', fontWeight: 'bold', margin: 0 }}>
                   Mohammed
                 </h3>
               </div>
             </div>
 
-            <div style={{ borderTop: '1px dashed rgba(212, 175, 55, 0.3)', paddingTop: '16px', display: 'flex', flexDirection: 'column', gap: '12px' }}>
+            <div style={{ borderTop: '1px dashed rgba(212, 175, 55, 0.3)', paddingTop: '12px', display: 'flex', flexDirection: 'column', gap: '10px' }}>
               <div>
-                <p className="font-sans" style={{ fontSize: '0.72rem', color: '#C5A059', fontWeight: '700', letterSpacing: '1px' }}>SON OF</p>
-                <p className="font-body" style={{ fontSize: 'clamp(1.1rem, 3vw, 1.25rem)', color: '#FDFBF7', fontWeight: '600' }}>
+                <p className="font-sans" style={{ fontSize: '0.68rem', color: '#C5A059', fontWeight: '700', letterSpacing: '0.8px' }}>SON OF</p>
+                <p className="font-body" style={{ fontSize: 'clamp(0.98rem, 2.8vw, 1.15rem)', color: '#FDFBF7', fontWeight: '600' }}>
                   K.M. Abdul Rahiman Sahib
                 </p>
               </div>
 
               <div>
-                <p className="font-sans" style={{ fontSize: '0.72rem', color: '#C5A059', fontWeight: '700', letterSpacing: '1px' }}>RESIDENCE</p>
-                <p className="font-body" style={{ fontSize: 'clamp(1.05rem, 2.8vw, 1.18rem)', color: '#F7E7B4', lineHeight: '1.5' }}>
+                <p className="font-sans" style={{ fontSize: '0.68rem', color: '#C5A059', fontWeight: '700', letterSpacing: '0.8px' }}>RESIDENCE</p>
+                <p className="font-body" style={{ fontSize: 'clamp(0.92rem, 2.6vw, 1.08rem)', color: '#F7E7B4', lineHeight: '1.45' }}>
                   Alappat Kadavil House,<br />
                   Near Juma Masjid, Eriyad,<br />
                   Kodungallur
@@ -99,36 +99,36 @@ END:VCALENDAR`;
           <div
             style={{
               background: 'linear-gradient(135deg, rgba(61, 12, 28, 0.48), rgba(22, 3, 8, 0.55))',
-              padding: 'clamp(20px, 4vw, 30px)',
-              borderRadius: '18px',
+              padding: 'clamp(16px, 3.5vw, 24px)',
+              borderRadius: '16px',
               border: '1px solid rgba(212, 175, 55, 0.45)',
               textAlign: 'left',
-              boxShadow: '0 12px 30px rgba(0, 0, 0, 0.35)'
+              boxShadow: '0 10px 25px rgba(0, 0, 0, 0.35)'
             }}
           >
-            <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '16px' }}>
-              <div style={{ width: '44px', height: '44px', borderRadius: '50%', background: 'rgba(212, 175, 55, 0.18)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
-                <Home size={22} color="#D4AF37" />
+            <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '12px' }}>
+              <div style={{ width: '38px', height: '38px', borderRadius: '50%', background: 'rgba(212, 175, 55, 0.18)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
+                <Home size={19} color="#D4AF37" />
               </div>
               <div>
-                <span className="font-cinzel" style={{ fontSize: '0.75rem', letterSpacing: '1.5px', color: '#D4AF37', fontWeight: 'bold', display: 'block' }}>BRIDE</span>
-                <h3 className="font-cinzel text-gold-gradient" style={{ fontSize: 'clamp(1.3rem, 3.8vw, 1.6rem)', fontWeight: 'bold', margin: 0 }}>
+                <span className="font-cinzel" style={{ fontSize: '0.68rem', letterSpacing: '1px', color: '#D4AF37', fontWeight: 'bold', display: 'block' }}>BRIDE</span>
+                <h3 className="font-cinzel text-gold-gradient" style={{ fontSize: 'clamp(1.15rem, 3.5vw, 1.45rem)', fontWeight: 'bold', margin: 0 }}>
                   Aisha
                 </h3>
               </div>
             </div>
 
-            <div style={{ borderTop: '1px dashed rgba(212, 175, 55, 0.3)', paddingTop: '16px', display: 'flex', flexDirection: 'column', gap: '12px' }}>
+            <div style={{ borderTop: '1px dashed rgba(212, 175, 55, 0.3)', paddingTop: '12px', display: 'flex', flexDirection: 'column', gap: '10px' }}>
               <div>
-                <p className="font-sans" style={{ fontSize: '0.72rem', color: '#C5A059', fontWeight: '700', letterSpacing: '1px' }}>DAUGHTER OF</p>
-                <p className="font-body" style={{ fontSize: 'clamp(1.1rem, 3vw, 1.25rem)', color: '#FDFBF7', fontWeight: '600' }}>
+                <p className="font-sans" style={{ fontSize: '0.68rem', color: '#C5A059', fontWeight: '700', letterSpacing: '0.8px' }}>DAUGHTER OF</p>
+                <p className="font-body" style={{ fontSize: 'clamp(0.98rem, 2.8vw, 1.15rem)', color: '#FDFBF7', fontWeight: '600' }}>
                   C.H. Ibrahim Haji
                 </p>
               </div>
 
               <div>
-                <p className="font-sans" style={{ fontSize: '0.72rem', color: '#C5A059', fontWeight: '700', letterSpacing: '1px' }}>RESIDENCE</p>
-                <p className="font-body" style={{ fontSize: 'clamp(1.05rem, 2.8vw, 1.18rem)', color: '#F7E7B4', lineHeight: '1.5' }}>
+                <p className="font-sans" style={{ fontSize: '0.68rem', color: '#C5A059', fontWeight: '700', letterSpacing: '0.8px' }}>RESIDENCE</p>
+                <p className="font-body" style={{ fontSize: 'clamp(0.92rem, 2.6vw, 1.08rem)', color: '#F7E7B4', lineHeight: '1.45' }}>
                   Baitul Noor, Rose Villa Compound,<br />
                   Aluva Road, Perumbavoor,<br />
                   Kochi
@@ -144,56 +144,56 @@ END:VCALENDAR`;
           style={{
             background: 'linear-gradient(135deg, rgba(61, 12, 28, 0.62), rgba(22, 3, 8, 0.65))',
             color: '#F7E7B4',
-            padding: 'clamp(24px, 5vw, 36px) clamp(14px, 4vw, 26px)',
-            borderRadius: '18px',
-            border: '2px solid #D4AF37',
-            marginBottom: '30px',
-            boxShadow: '0 12px 30px rgba(0, 0, 0, 0.4)'
+            padding: 'clamp(18px, 4vw, 30px) clamp(12px, 3vw, 20px)',
+            borderRadius: '16px',
+            border: '1.5px solid #D4AF37',
+            marginBottom: '24px',
+            boxShadow: '0 10px 25px rgba(0, 0, 0, 0.4)'
           }}
         >
-          <p className="font-cinzel" style={{ fontSize: 'clamp(0.78rem, 2.5vw, 0.9rem)', letterSpacing: '2.5px', color: '#D4AF37', marginBottom: '8px', fontWeight: 'bold' }}>
+          <p className="font-cinzel" style={{ fontSize: 'clamp(0.7rem, 2.2vw, 0.85rem)', letterSpacing: '2px', color: '#D4AF37', marginBottom: '6px', fontWeight: 'bold' }}>
             EVENT SCHEDULE &amp; VENUE
           </p>
-          <h2 className="font-cinzel text-gold-gradient" style={{ fontSize: 'clamp(1.5rem, 4.5vw, 2.2rem)', marginBottom: '18px' }}>
+          <h2 className="font-cinzel text-gold-gradient" style={{ fontSize: 'clamp(1.25rem, 4vw, 1.9rem)', marginBottom: '14px' }}>
             Thursday, September 10, 2026
           </h2>
 
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 220px), 1fr))', gap: '18px', maxWidth: '600px', margin: '0 auto 24px auto' }}>
-            <div style={{ background: 'rgba(212, 175, 55, 0.12)', padding: '16px', borderRadius: '14px', border: '1px solid rgba(212, 175, 55, 0.35)' }}>
-              <Clock color="#D4AF37" size={22} style={{ margin: '0 auto 6px auto' }} />
-              <p className="font-sans" style={{ fontSize: '0.72rem', letterSpacing: '1px', color: '#C5A059', fontWeight: 'bold' }}>NIKKAH CEREMONY</p>
-              <p className="font-body" style={{ fontSize: '1.3rem', color: '#FDFBF7', fontWeight: 'bold', margin: '4px 0 0 0' }}>11:00 AM</p>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 200px), 1fr))', gap: '12px', maxWidth: '580px', margin: '0 auto 18px auto' }}>
+            <div style={{ background: 'rgba(212, 175, 55, 0.12)', padding: '12px 10px', borderRadius: '12px', border: '1px solid rgba(212, 175, 55, 0.35)' }}>
+              <Clock color="#D4AF37" size={20} style={{ margin: '0 auto 4px auto' }} />
+              <p className="font-sans" style={{ fontSize: '0.68rem', letterSpacing: '0.8px', color: '#C5A059', fontWeight: 'bold' }}>NIKKAH CEREMONY</p>
+              <p className="font-body" style={{ fontSize: 'clamp(1.05rem, 3.2vw, 1.25rem)', color: '#FDFBF7', fontWeight: 'bold', margin: '3px 0 0 0' }}>11:00 AM</p>
             </div>
 
-            <div style={{ background: 'rgba(212, 175, 55, 0.12)', padding: '16px', borderRadius: '14px', border: '1px solid rgba(212, 175, 55, 0.35)' }}>
-              <Heart color="#D4AF37" size={22} style={{ margin: '0 auto 6px auto' }} />
-              <p className="font-sans" style={{ fontSize: '0.72rem', letterSpacing: '1px', color: '#C5A059', fontWeight: 'bold' }}>RECEPTION &amp; FEAST</p>
-              <p className="font-body" style={{ fontSize: '1.3rem', color: '#FDFBF7', fontWeight: 'bold', margin: '4px 0 0 0' }}>12:30 PM ONWARDS</p>
+            <div style={{ background: 'rgba(212, 175, 55, 0.12)', padding: '12px 10px', borderRadius: '12px', border: '1px solid rgba(212, 175, 55, 0.35)' }}>
+              <Heart color="#D4AF37" size={20} style={{ margin: '0 auto 4px auto' }} />
+              <p className="font-sans" style={{ fontSize: '0.68rem', letterSpacing: '0.8px', color: '#C5A059', fontWeight: 'bold' }}>RECEPTION &amp; FEAST</p>
+              <p className="font-body" style={{ fontSize: 'clamp(1.05rem, 3.2vw, 1.25rem)', color: '#FDFBF7', fontWeight: 'bold', margin: '3px 0 0 0' }}>12:30 PM ONWARDS</p>
             </div>
           </div>
 
-          <div style={{ paddingTop: '10px' }}>
-            <div style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', width: '46px', height: '46px', borderRadius: '50%', background: 'linear-gradient(135deg, #C5A059, #AA771C)', color: '#160308', marginBottom: '12px' }}>
-              <MapPin size={24} />
+          <div style={{ paddingTop: '8px' }}>
+            <div style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', width: '40px', height: '40px', borderRadius: '50%', background: 'linear-gradient(135deg, #C5A059, #AA771C)', color: '#160308', marginBottom: '10px' }}>
+              <MapPin size={21} />
             </div>
-            <h3 className="font-cinzel" style={{ fontSize: 'clamp(1.4rem, 4.5vw, 1.9rem)', color: '#FFF1BA', marginBottom: '6px', fontWeight: 'bold' }}>
+            <h3 className="font-cinzel" style={{ fontSize: 'clamp(1.18rem, 3.8vw, 1.7rem)', color: '#FFF1BA', marginBottom: '4px', fontWeight: 'bold' }}>
               Le Méridien Kochi, Maradu
             </h3>
-            <p className="font-body" style={{ fontSize: 'clamp(1.05rem, 3.5vw, 1.25rem)', color: '#F7E7B4' }}>
+            <p className="font-body" style={{ fontSize: 'clamp(0.95rem, 3vw, 1.15rem)', color: '#F7E7B4' }}>
               NH 66, Kundannoor, Maradu, Kochi, Kerala
             </p>
           </div>
         </div>
 
         {/* Action Buttons */}
-        <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '14px' }}>
+        <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '10px' }}>
           <a
             href={mapsUrl}
             target="_blank"
             rel="noopener noreferrer"
             className="btn-gold"
           >
-            <Navigation size={18} />
+            <Navigation size={17} />
             <span>Open Location (Google Maps)</span>
           </a>
 
@@ -201,7 +201,7 @@ END:VCALENDAR`;
             onClick={handleCalendarDownload}
             className="btn-bronze"
           >
-            <Calendar size={18} />
+            <Calendar size={17} />
             <span>Add to Calendar (.ics)</span>
           </button>
         </div>
