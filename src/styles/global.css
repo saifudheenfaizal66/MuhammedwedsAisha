@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Alex+Brush&family=Cinzel+Decorative:wght@400;700;900&family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Great+Vibes&family=Montserrat:wght@300;400;500;600;700&family=Noto+Sans+Malayalam:wght@400;500;600;700&display=swap');
+
+:root {
+  --gold-metallic: #D4AF37;
+  --gold-accent: #C5A059;
+  --gold-light: #F7E7B4;
+  --gold-bright: #FFF1BA;
+  --burgundy-dark: #160308;
+  --burgundy-mid: #2A0713;
+  --burgundy-deep: #3D0C1C;
+  --charcoal-dark: #120A0D;
+  --cream-soft: #FDFBF7;
+  --text-muted: #F3E5AB;
+  --gold-gradient: linear-gradient(135deg, #BF953F 0%, #FCF6BA 25%, #B38728 50%, #FBF5B7 75%, #AA771C 100%);
+  --gold-gradient-webkit: -webkit-linear-gradient(135deg, #BF953F 0%, #FCF6BA 25%, #B38728 50%, #FBF5B7 75%, #AA771C 100%);
+  --burgundy-gradient: linear-gradient(135deg, #160308 0%, #2A0713 35%, #3D0C1C 70%, #120A0D 100%);
+  --card-glass: rgba(28, 4, 11, 0.55);
+  --banner-glass: rgba(45, 7, 19, 0.58);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  width: 100%;
+  min-height: 100vh;
+  font-family: 'Cormorant Garamond', 'Garamond', 'Georgia', serif;
+  color: var(--cream-soft);
+  background: var(--burgundy-gradient);
+  background-attachment: fixed;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* Typography Helpers */
+.font-cinzel {
+  font-family: 'Cinzel Decorative', 'Cinzel', 'Georgia', 'Times New Roman', serif;
+}
+
+.font-calligraphy {
+  font-family: 'Great Vibes', 'Alex Brush', 'Brush Script MT', 'Segoe Script', cursive;
+}
+
+.font-alex {
+  font-family: 'Alex Brush', 'Great Vibes', 'Brush Script MT', 'Segoe Script', cursive;
+}
+
+.font-body {
+  font-family: 'Cormorant Garamond', 'Garamond', 'Georgia', serif;
+}
+
+.font-sans {
+  font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.font-malayalam {
+  font-family: 'Noto Sans Malayalam', 'Segoe UI', Roboto, sans-serif;
+  line-height: 1.8;
+}
+
+/* Metallic Gold Gradient Text */
+.text-gold-gradient {
+  color: var(--gold-metallic);
+  background: var(--gold-gradient-webkit);
+  background: var(--gold-gradient);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine 4s linear infinite;
+}
+
+@supports not ((-webkit-background-clip: text) or (background-clip: text)) {
+  .text-gold-gradient {
+    color: var(--gold-metallic) !important;
+    -webkit-text-fill-color: var(--gold-metallic) !important;
+    background: none !important;
+  }
+}
+
+@keyframes shine {
+  to {
+    background-position: 200% center;
+  }
+}
+
+/* Deep Burgundy & Gold Glassmorphism Card Frame */
+.gold-border-card {
+  position: relative;
+  background: var(--card-glass);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(212, 175, 55, 0.45);
+  box-shadow: 
+    0 15px 45px rgba(0, 0, 0, 0.65),
+    0 5px 20px rgba(61, 12, 28, 0.35),
+    inset 0 0 25px rgba(212, 175, 55, 0.08);
+  border-radius: 24px;
+  background-clip: padding-box;
+  -webkit-background-clip: padding-box;
+}
+
+.gold-border-card::before {
+  content: '';
+  position: absolute;
+  inset: 6px;
+  border: 1px dashed rgba(212, 175, 55, 0.38);
+  border-radius: 18px;
+  pointer-events: none;
+}
+
+/* Custom Buttons */
+.btn-gold {
+  background: var(--gold-gradient);
+  background-size: 200% auto;
+  color: #160308;
+  font-family: 'Cinzel Decorative', serif;
+  font-weight: 700;
+  padding: 16px 32px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  box-shadow: 0 6px 24px rgba(212, 175, 55, 0.45);
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+
+.btn-gold:hover {
+  background-position: right center;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 32px rgba(212, 175, 55, 0.7);
+}
+
+.btn-bronze {
+  background: linear-gradient(135deg, rgba(42, 7, 19, 0.92), rgba(18, 10, 13, 0.96));
+  color: var(--gold-light);
+  font-family: 'Cinzel Decorative', serif;
+  font-weight: 600;
+  padding: 16px 32px;
+  border: 1px solid var(--gold-metallic);
+  border-radius: 30px;
+  cursor: pointer;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.7);
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+
+.btn-bronze:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 26px rgba(212, 175, 55, 0.4);
+  background: linear-gradient(135deg, rgba(61, 12, 28, 0.95), rgba(35, 6, 15, 0.95));
+}
+
+/* Phone link overrides */
+a[href^="tel:"] {
+  color: inherit !important;
+  text-decoration: none !important;
+}
+
+.tel-link {
+  color: var(--gold-light) !important;
+  text-decoration: none !important;
+  transition: color 0.2s ease;
+}
+
+.tel-link:hover {
+  color: var(--gold-metallic) !important;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--burgundy-dark);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--gold-accent);
+  border-radius: 4px;
+}
+
+/* Section Container Spacing */
+.section-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 50px 20px;
+  position: relative;
+  z-index: 10;
+}
+
+/* Mobile Responsive Optimization */
+@media (max-width: 640px) {
+  .section-container {
+    padding: 34px 14px;
+  }
+
+  .gold-border-card {
+    border-radius: 18px;
+    margin-bottom: 24px;
+  }
+
+  .gold-border-card::before {
+    inset: 4px;
+    border-radius: 14px;
+  }
+
+  .btn-gold, .btn-bronze {
+    width: 100%;
+    justify-content: center;
+    padding: 14px 18px;
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-container {
+    padding: 26px 12px;
+  }
+
+  .gold-border-card {
+    border-radius: 16px;
+    padding-left: 14px !important;
+    padding-right: 14px !important;
+    margin-bottom: 20px;
+  }
+
+  .btn-gold, .btn-bronze {
+    width: 100%;
+    max-width: 100%;
+    justify-content: center;
+    padding: 13px 14px;
+    font-size: 0.88rem !important;
+    letter-spacing: 0.2px;
+  }
+}
+
+

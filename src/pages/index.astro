@@ -1,0 +1,57 @@
+---
+import '../styles/global.css';
+import BackgroundLayer from '../components/BackgroundLayer.jsx';
+import Envelope from '../components/Envelope.jsx';
+import AudioPlayer from '../components/AudioPlayer.jsx';
+import HeroSection from '../components/HeroSection.jsx';
+import EventDetails from '../components/EventDetails.jsx';
+import RSVPForm from '../components/RSVPForm.jsx';
+import ContactSection from '../components/ContactSection.jsx';
+---
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Nikkah Invitation | Mohammed & Aisha</title>
+		<meta name="description" content="Official Nikkah Invitation of Mohammed with Aisha on Thursday, September 10, 2026 at Le Méridien Kochi, Maradu." />
+		<meta property="og:title" content="Nikkah Invitation | Mohammed & Aisha" />
+		<meta property="og:description" content="Inshaallah Nikkah Ceremony on Thursday, September 10, 2026 at Le Méridien Kochi, Maradu." />
+		<meta property="og:type" content="website" />
+
+		<!-- Preconnect and Google Fonts preload for cross-device consistency -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Cinzel+Decorative:wght@400;700;900&family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Great+Vibes&family=Montserrat:wght@300;400;500;600;700&family=Noto+Sans+Malayalam:wght@400;500;600;700&display=swap" rel="stylesheet" />
+	</head>
+	<body>
+		<!-- Full-Bleed Ambient Background Image Slideshow Layer -->
+		<BackgroundLayer client:load />
+
+		<!-- Interactive Wax-Seal Envelope Screen Overlay -->
+		<Envelope client:load />
+
+		<!-- Floating Ambient Background Audio Player Toggle -->
+		<AudioPlayer client:load />
+
+		<!-- Main Invitation Content -->
+		<main>
+			<!-- Hero & Countdown Banner Section -->
+			<HeroSection client:load />
+
+			<!-- Event Details, Family Info & Malayalam Invitation -->
+			<EventDetails client:load />
+
+			<!-- Streamlined RSVP Section -->
+			<RSVPForm client:load />
+
+			<!-- Interactive Footer & Branding -->
+			<ContactSection client:load />
+		</main>
+	</body>
+</html>
+
