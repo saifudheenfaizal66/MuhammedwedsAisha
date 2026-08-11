@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import confetti from 'canvas-confetti';
 import { Sparkles, Heart } from 'lucide-react';
@@ -10,6 +10,20 @@ const getAssetUrl = (path) => {
 
 export default function Envelope({ onOpen }) {
   const [isOpen, setIsOpen] = useState(false);
+
+  useEffect(() => {
+    if (!isOpen) {
+      document.body.style.overflow = 'hidden';
+      document.body.style.touchAction = 'none';
+    } else {
+      document.body.style.overflow = '';
+      document.body.style.touchAction = '';
+    }
+    return () => {
+      document.body.style.overflow = '';
+      document.body.style.touchAction = '';
+    };
+  }, [isOpen]);
 
   const handleOpen = (e) => {
     if (e && e.preventDefault && e.type === 'touchend') {
@@ -47,7 +61,11 @@ export default function Envelope({ onOpen }) {
           onClick={handleOpen}
           style={{
             position: 'fixed',
-            inset: 0,
+            top: 0,
+            left: 0,
+            width: '100vw',
+            height: '100vh',
+            height: '100dvh',
             zIndex: 900,
             backgroundColor: '#160308',
             background: `radial-gradient(circle at center, rgba(42, 7, 19, 0.90) 0%, rgba(18, 3, 7, 0.98) 100%), url("${coverImg}")`,
@@ -59,7 +77,7 @@ export default function Envelope({ onOpen }) {
             justifyContent: 'center',
             padding: '20px',
             boxShadow: 'inset 0 0 120px rgba(0, 0, 0, 0.85)',
-            touchAction: 'manipulation',
+            touchAction: 'none',
             cursor: 'pointer',
             isolation: 'isolate',
             transform: 'translateZ(0)',

@@ -22,7 +22,11 @@ export default function BackgroundLayer() {
     <div
       style={{
         position: 'fixed',
-        inset: 0,
+        top: 0,
+        left: 0,
+        width: '100vw',
+        height: '100vh',
+        height: '100dvh',
         zIndex: 0,
         pointerEvents: 'none',
         overflow: 'hidden',

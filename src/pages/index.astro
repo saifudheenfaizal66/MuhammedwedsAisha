@@ -10,18 +10,50 @@ import ContactSection from '../components/ContactSection.jsx';
 ---
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" style="background-color: #160308;">
 	<head>
 		<meta charset="utf-8" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 		<meta name="format-detection" content="telephone=no" />
 		<meta name="generator" content={Astro.generator} />
+		<meta name="theme-color" content="#160308" />
+		<meta name="msapplication-TileColor" content="#160308" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 		<title>Nikkah Invitation | Mohammed & Aisha</title>
 		<meta name="description" content="Official Nikkah Invitation of Mohammed with Aisha on Thursday, September 10, 2026 at Le Méridien Kochi, Maradu." />
 		<meta property="og:title" content="Nikkah Invitation | Mohammed & Aisha" />
 		<meta property="og:description" content="Inshaallah Nikkah Ceremony on Thursday, September 10, 2026 at Le Méridien Kochi, Maradu." />
 		<meta property="og:type" content="website" />
+
+		<!-- Immediate inline style block to prevent initial white page flash before CSS loads -->
+		<style is:inline>
+			html, body {
+				background-color: #160308 !important;
+				background: #160308 !important;
+				color: #FDFBF7;
+				margin: 0;
+				padding: 0;
+				width: 100%;
+				min-height: 100vh;
+				min-height: 100dvh;
+				overflow-x: hidden;
+				-webkit-tap-highlight-color: transparent;
+			}
+			main {
+				background-color: transparent;
+				position: relative;
+				z-index: 10;
+			}
+			canvas {
+				background: transparent !important;
+			}
+		</style>
+
+		<!-- Preload key background images for instant mobile rendering -->
+		<link rel="preload" as="image" href="/cover-image.jpg" />
+		<link rel="preload" as="image" href="/main-image.jpg" />
 
 		<!-- Preconnect and Google Fonts preload for cross-device consistency -->
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
