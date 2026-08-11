@@ -29,6 +29,7 @@ html, body {
   min-height: 100vh;
   font-family: 'Cormorant Garamond', 'Garamond', 'Georgia', serif;
   color: var(--cream-soft);
+  background-color: #160308;
   background: var(--burgundy-gradient);
   background-attachment: fixed;
   overflow-x: hidden;
@@ -36,6 +37,26 @@ html, body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
+  -webkit-tap-highlight-color: transparent;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: transparent;
+}
+
+img, canvas, svg, button, a, div {
+  -webkit-tap-highlight-color: transparent;
+}
+
+canvas {
+  background: transparent !important;
+}
+
+img {
+  background-color: #160308;
 }
 
 /* Typography Helpers */
@@ -90,9 +111,10 @@ html, body {
   }
 }
 
-/* Deep Burgundy & Gold Glassmorphism Card Frame */
+/* Deep Burgundy & Gold Glassmorphism Card Frame with Solid GPU Composite Fallback */
 .gold-border-card {
   position: relative;
+  background-color: rgba(22, 3, 8, 0.85);
   background: var(--card-glass);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
@@ -104,6 +126,10 @@ html, body {
   border-radius: 24px;
   background-clip: padding-box;
   -webkit-background-clip: padding-box;
+  isolation: isolate;
+  transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
 }
 
 .gold-border-card::before {

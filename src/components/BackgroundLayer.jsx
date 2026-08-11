@@ -38,7 +38,10 @@ export default function BackgroundLayer() {
           transition={{ duration: 1.8, ease: 'easeInOut' }}
           style={{
             position: 'absolute',
-            inset: 0
+            inset: 0,
+            backgroundColor: '#160308',
+            isolation: 'isolate',
+            transform: 'translateZ(0)'
           }}
         >
           <img
@@ -49,7 +52,8 @@ export default function BackgroundLayer() {
               height: '100%',
               objectFit: 'cover',
               objectPosition: 'center',
-              display: 'block'
+              display: 'block',
+              backgroundColor: '#160308'
             }}
           />
         </motion.div>

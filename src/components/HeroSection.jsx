@@ -106,7 +106,7 @@ export default function HeroSection() {
         </div>
       </motion.div>
 
-      {/* Main English Invitation Text Card with Scroll Stagger */}
+      {/* Theme-based Countdown Section (Immediately below Groom & Bride Names) */}
       <motion.div
         initial={{ opacity: 0, y: 35 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -114,38 +114,11 @@ export default function HeroSection() {
         transition={{ duration: 0.8, delay: 0.1, ease: 'easeOut' }}
         className="gold-border-card"
         style={{
-          maxWidth: '760px',
-          margin: '0 auto 40px auto',
-          padding: 'clamp(24px, 5vw, 36px) clamp(16px, 4vw, 30px)',
-          background: 'linear-gradient(135deg, rgba(35, 6, 15, 0.58), rgba(61, 12, 28, 0.48))'
-        }}
-      >
-        <div style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', width: '40px', height: '40px', borderRadius: '50%', background: 'rgba(212, 175, 55, 0.15)', marginBottom: '12px' }}>
-          <Heart size={20} color="#D4AF37" fill="#D4AF37" />
-        </div>
-        <p className="font-body" style={{
-          fontSize: 'clamp(1.15rem, 3.8vw, 1.4rem)',
-          color: '#FDFBF7',
-          lineHeight: '1.8',
-          fontStyle: 'italic',
-          letterSpacing: '0.2px'
-        }}>
-          "With the grace and blessings of Almighty Allah, we cordially invite you and your family to grace the auspicious occasion of the Nikkah ceremony of our beloved son <strong style={{ color: '#F7E7B4', fontStyle: 'normal', fontWeight: '700' }}>Mohammed</strong> with <strong style={{ color: '#F7E7B4', fontStyle: 'normal', fontWeight: '700' }}>Aisha</strong>, daughter of C.H. Ibrahim Haji. Join us in celebrating this joyous union followed by a grand reception."
-        </p>
-      </motion.div>
-
-      {/* Theme-based Countdown Section */}
-      <motion.div
-        initial={{ opacity: 0, y: 35 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, amount: 0.25 }}
-        transition={{ duration: 0.8, delay: 0.2, ease: 'easeOut' }}
-        className="gold-border-card"
-        style={{
           padding: 'clamp(22px, 5vw, 32px) clamp(14px, 4vw, 24px)',
           display: 'inline-block',
           width: '100%',
           maxWidth: '680px',
+          margin: '0 auto 40px auto',
           background: 'linear-gradient(135deg, rgba(22, 3, 8, 0.60), rgba(42, 7, 19, 0.50))'
         }}
       >
@@ -190,6 +163,34 @@ export default function HeroSection() {
             </div>
           ))}
         </div>
+      </motion.div>
+
+      {/* Main English Invitation Text Card ("With the grace and blessings...") */}
+      <motion.div
+        initial={{ opacity: 0, y: 35 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.25 }}
+        transition={{ duration: 0.8, delay: 0.2, ease: 'easeOut' }}
+        className="gold-border-card"
+        style={{
+          maxWidth: '760px',
+          margin: '0 auto 40px auto',
+          padding: 'clamp(24px, 5vw, 36px) clamp(16px, 4vw, 30px)',
+          background: 'linear-gradient(135deg, rgba(35, 6, 15, 0.58), rgba(61, 12, 28, 0.48))'
+        }}
+      >
+        <div style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', width: '40px', height: '40px', borderRadius: '50%', background: 'rgba(212, 175, 55, 0.15)', marginBottom: '12px' }}>
+          <Heart size={20} color="#D4AF37" fill="#D4AF37" />
+        </div>
+        <p className="font-body" style={{
+          fontSize: 'clamp(1.15rem, 3.8vw, 1.4rem)',
+          color: '#FDFBF7',
+          lineHeight: '1.8',
+          fontStyle: 'italic',
+          letterSpacing: '0.2px'
+        }}>
+          "With the grace and blessings of Almighty Allah, we cordially invite you and your family to grace the auspicious occasion of the Nikkah ceremony of our beloved son <strong style={{ color: '#F7E7B4', fontStyle: 'normal', fontWeight: '700' }}>Mohammed</strong> with <strong style={{ color: '#F7E7B4', fontStyle: 'normal', fontWeight: '700' }}>Aisha</strong>, daughter of C.H. Ibrahim Haji. Join us in celebrating this joyous union followed by a grand reception."
+        </p>
       </motion.div>
     </section>
   );

@@ -12,6 +12,9 @@ export default function Envelope({ onOpen }) {
   const [isOpen, setIsOpen] = useState(false);
 
   const handleOpen = (e) => {
+    if (e && e.preventDefault && e.type === 'touchend') {
+      e.preventDefault();
+    }
     if (isOpen) return;
     setIsOpen(true);
 
@@ -42,11 +45,11 @@ export default function Envelope({ onOpen }) {
           initial={{ opacity: 1 }}
           exit={{ opacity: 0, transition: { duration: 0.8, ease: "easeInOut" } }}
           onClick={handleOpen}
-          onTouchEnd={handleOpen}
           style={{
             position: 'fixed',
             inset: 0,
             zIndex: 900,
+            backgroundColor: '#160308',
             background: `radial-gradient(circle at center, rgba(42, 7, 19, 0.90) 0%, rgba(18, 3, 7, 0.98) 100%), url("${coverImg}")`,
             backgroundSize: 'cover',
             backgroundPosition: 'center',
@@ -57,7 +60,12 @@ export default function Envelope({ onOpen }) {
             padding: '20px',
             boxShadow: 'inset 0 0 120px rgba(0, 0, 0, 0.85)',
             touchAction: 'manipulation',
-            cursor: 'pointer'
+            cursor: 'pointer',
+            isolation: 'isolate',
+            transform: 'translateZ(0)',
+            WebkitBackfaceVisibility: 'hidden',
+            backfaceVisibility: 'hidden',
+            WebkitTapHighlightColor: 'transparent'
           }}
         >
           {/* Envelope Frame Container */}
@@ -66,12 +74,12 @@ export default function Envelope({ onOpen }) {
             animate={{ scale: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
             onClick={handleOpen}
-            onTouchEnd={handleOpen}
             style={{
               width: '100%',
               maxWidth: '520px',
               height: 'min(370px, 75vh)',
               position: 'relative',
+              backgroundColor: '#23060f',
               background: `linear-gradient(rgba(35, 6, 15, 0.94), rgba(18, 3, 7, 0.97)), url("${coverImg}")`,
               backgroundSize: 'cover',
               backgroundPosition: 'center',
@@ -84,7 +92,9 @@ export default function Envelope({ onOpen }) {
               justifyContent: 'center',
               overflow: 'hidden',
               cursor: 'pointer',
-              padding: '16px 12px'
+              padding: '16px 12px',
+              isolation: 'isolate',
+              WebkitTapHighlightColor: 'transparent'
             }}
           >
             {/* Top Flap Graphic Lines */}
@@ -125,7 +135,6 @@ export default function Envelope({ onOpen }) {
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.95 }}
               onClick={handleOpen}
-              onTouchEnd={handleOpen}
               style={{
                 position: 'relative',
                 zIndex: 20,
@@ -139,7 +148,8 @@ export default function Envelope({ onOpen }) {
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
-                cursor: 'pointer'
+                cursor: 'pointer',
+                WebkitTapHighlightColor: 'transparent'
               }}
             >
               <div style={{
