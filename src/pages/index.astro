@@ -29,7 +29,14 @@ import ContactSection from '../components/ContactSection.jsx';
 
 		<!-- Immediate inline style block to prevent initial white page flash before CSS loads -->
 		<style is:inline>
-			html, body {
+			html {
+				background-color: #160308 !important;
+				width: 100%;
+				min-height: 100%;
+				overflow-x: hidden;
+				-webkit-tap-highlight-color: transparent;
+			}
+			body {
 				background-color: #160308 !important;
 				background: #160308 !important;
 				color: #FDFBF7;
@@ -39,12 +46,16 @@ import ContactSection from '../components/ContactSection.jsx';
 				min-height: 100vh;
 				min-height: 100dvh;
 				overflow-x: hidden;
+				overflow-y: auto;
+				-webkit-overflow-scrolling: touch;
 				-webkit-tap-highlight-color: transparent;
 			}
 			main {
 				background-color: transparent;
 				position: relative;
 				z-index: 10;
+				width: 100%;
+				min-height: 100vh;
 			}
 			canvas {
 				background: transparent !important;
