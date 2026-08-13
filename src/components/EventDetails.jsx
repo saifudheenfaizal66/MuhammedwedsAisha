@@ -56,37 +56,38 @@ END:VCALENDAR`;
           {/* Groom Details Card */}
           <div
             style={{
-              background: 'linear-gradient(135deg, rgba(61, 12, 28, 0.48), rgba(22, 3, 8, 0.55))',
-              padding: 'clamp(16px, 3.5vw, 24px)',
+              background: 'linear-gradient(135deg, rgba(61, 12, 28, 0.65), rgba(22, 3, 8, 0.75))',
+              padding: 'clamp(18px, 3.5vw, 26px)',
               borderRadius: '16px',
-              border: '1px solid rgba(212, 175, 55, 0.45)',
-              textAlign: 'left',
-              boxShadow: '0 10px 25px rgba(0, 0, 0, 0.35)'
+              border: '1.2px solid rgba(212, 175, 55, 0.55)',
+              textAlign: 'center',
+              boxShadow: '0 10px 25px rgba(0, 0, 0, 0.45)',
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'center'
             }}
           >
-            <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '12px' }}>
-              <div style={{ width: '38px', height: '38px', borderRadius: '50%', background: 'rgba(212, 175, 55, 0.18)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
-                <Users size={19} color="#D4AF37" />
+            <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '6px', marginBottom: '14px' }}>
+              <div style={{ width: '42px', height: '42px', borderRadius: '50%', background: 'rgba(212, 175, 55, 0.22)', border: '1px solid #D4AF37', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0, boxShadow: '0 0 12px rgba(212, 175, 55, 0.3)' }}>
+                <Users size={20} color="#D4AF37" />
               </div>
-              <div>
-                <span className="font-cinzel" style={{ fontSize: '0.68rem', letterSpacing: '1px', color: '#D4AF37', fontWeight: 'bold', display: 'block' }}>GROOM</span>
-                <h3 className="font-cinzel text-gold-gradient" style={{ fontSize: 'clamp(1.15rem, 3.5vw, 1.45rem)', fontWeight: 'bold', margin: 0 }}>
-                  Mohammed
-                </h3>
-              </div>
+              <span className="font-cinzel" style={{ fontSize: '0.72rem', letterSpacing: '1.5px', color: '#D4AF37', fontWeight: 'bold', display: 'block', textTransform: 'uppercase' }}>GROOM</span>
+              <h3 className="font-cinzel text-gold-gradient" style={{ fontSize: 'clamp(1.25rem, 3.8vw, 1.55rem)', fontWeight: 'bold', margin: 0 }}>
+                Mohammed
+              </h3>
             </div>
 
-            <div style={{ borderTop: '1px dashed rgba(212, 175, 55, 0.3)', paddingTop: '12px', display: 'flex', flexDirection: 'column', gap: '10px' }}>
+            <div style={{ borderTop: '1px dashed rgba(212, 175, 55, 0.35)', paddingTop: '14px', width: '100%', display: 'flex', flexDirection: 'column', gap: '12px', textAlign: 'center' }}>
               <div>
-                <p className="font-sans" style={{ fontSize: '0.68rem', color: '#C5A059', fontWeight: '700', letterSpacing: '0.8px' }}>SON OF</p>
-                <p className="font-body" style={{ fontSize: 'clamp(0.98rem, 2.8vw, 1.15rem)', color: '#FDFBF7', fontWeight: '600' }}>
+                <p className="font-sans" style={{ fontSize: '0.7rem', color: '#D4AF37', fontWeight: '800', letterSpacing: '1px', textTransform: 'uppercase' }}>SON OF</p>
+                <p className="font-body" style={{ fontSize: 'clamp(1.02rem, 3vw, 1.2rem)', color: '#F5F5F5', fontWeight: '700', margin: '2px 0 0 0' }}>
                   K.M. Abdul Rahiman Sahib
                 </p>
               </div>
 
               <div>
-                <p className="font-sans" style={{ fontSize: '0.68rem', color: '#C5A059', fontWeight: '700', letterSpacing: '0.8px' }}>RESIDENCE</p>
-                <p className="font-body" style={{ fontSize: 'clamp(0.92rem, 2.6vw, 1.08rem)', color: '#F7E7B4', lineHeight: '1.45' }}>
+                <p className="font-sans" style={{ fontSize: '0.7rem', color: '#D4AF37', fontWeight: '800', letterSpacing: '1px', textTransform: 'uppercase' }}>RESIDENCE</p>
+                <p className="font-body" style={{ fontSize: 'clamp(0.96rem, 2.8vw, 1.12rem)', color: '#F5F5F5', lineHeight: '1.5', margin: '2px 0 0 0', fontWeight: '500' }}>
                   Alappat Kadavil House,<br />
                   Near Juma Masjid, Eriyad,<br />
                   Kodungallur
@@ -98,37 +99,38 @@ END:VCALENDAR`;
           {/* Bride Details Card */}
           <div
             style={{
-              background: 'linear-gradient(135deg, rgba(61, 12, 28, 0.48), rgba(22, 3, 8, 0.55))',
-              padding: 'clamp(16px, 3.5vw, 24px)',
+              background: 'linear-gradient(135deg, rgba(61, 12, 28, 0.65), rgba(22, 3, 8, 0.75))',
+              padding: 'clamp(18px, 3.5vw, 26px)',
               borderRadius: '16px',
-              border: '1px solid rgba(212, 175, 55, 0.45)',
-              textAlign: 'left',
-              boxShadow: '0 10px 25px rgba(0, 0, 0, 0.35)'
+              border: '1.2px solid rgba(212, 175, 55, 0.55)',
+              textAlign: 'center',
+              boxShadow: '0 10px 25px rgba(0, 0, 0, 0.45)',
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'center'
             }}
           >
-            <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '12px' }}>
-              <div style={{ width: '38px', height: '38px', borderRadius: '50%', background: 'rgba(212, 175, 55, 0.18)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
-                <Home size={19} color="#D4AF37" />
+            <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '6px', marginBottom: '14px' }}>
+              <div style={{ width: '42px', height: '42px', borderRadius: '50%', background: 'rgba(212, 175, 55, 0.22)', border: '1px solid #D4AF37', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0, boxShadow: '0 0 12px rgba(212, 175, 55, 0.3)' }}>
+                <Home size={20} color="#D4AF37" />
               </div>
-              <div>
-                <span className="font-cinzel" style={{ fontSize: '0.68rem', letterSpacing: '1px', color: '#D4AF37', fontWeight: 'bold', display: 'block' }}>BRIDE</span>
-                <h3 className="font-cinzel text-gold-gradient" style={{ fontSize: 'clamp(1.15rem, 3.5vw, 1.45rem)', fontWeight: 'bold', margin: 0 }}>
-                  Aisha
-                </h3>
-              </div>
+              <span className="font-cinzel" style={{ fontSize: '0.72rem', letterSpacing: '1.5px', color: '#D4AF37', fontWeight: 'bold', display: 'block', textTransform: 'uppercase' }}>BRIDE</span>
+              <h3 className="font-cinzel text-gold-gradient" style={{ fontSize: 'clamp(1.25rem, 3.8vw, 1.55rem)', fontWeight: 'bold', margin: 0 }}>
+                Aisha
+              </h3>
             </div>
 
-            <div style={{ borderTop: '1px dashed rgba(212, 175, 55, 0.3)', paddingTop: '12px', display: 'flex', flexDirection: 'column', gap: '10px' }}>
+            <div style={{ borderTop: '1px dashed rgba(212, 175, 55, 0.35)', paddingTop: '14px', width: '100%', display: 'flex', flexDirection: 'column', gap: '12px', textAlign: 'center' }}>
               <div>
-                <p className="font-sans" style={{ fontSize: '0.68rem', color: '#C5A059', fontWeight: '700', letterSpacing: '0.8px' }}>DAUGHTER OF</p>
-                <p className="font-body" style={{ fontSize: 'clamp(0.98rem, 2.8vw, 1.15rem)', color: '#FDFBF7', fontWeight: '600' }}>
+                <p className="font-sans" style={{ fontSize: '0.7rem', color: '#D4AF37', fontWeight: '800', letterSpacing: '1px', textTransform: 'uppercase' }}>DAUGHTER OF</p>
+                <p className="font-body" style={{ fontSize: 'clamp(1.02rem, 3vw, 1.2rem)', color: '#F5F5F5', fontWeight: '700', margin: '2px 0 0 0' }}>
                   C.H. Ibrahim Haji
                 </p>
               </div>
 
               <div>
-                <p className="font-sans" style={{ fontSize: '0.68rem', color: '#C5A059', fontWeight: '700', letterSpacing: '0.8px' }}>RESIDENCE</p>
-                <p className="font-body" style={{ fontSize: 'clamp(0.92rem, 2.6vw, 1.08rem)', color: '#F7E7B4', lineHeight: '1.45' }}>
+                <p className="font-sans" style={{ fontSize: '0.7rem', color: '#D4AF37', fontWeight: '800', letterSpacing: '1px', textTransform: 'uppercase' }}>RESIDENCE</p>
+                <p className="font-body" style={{ fontSize: 'clamp(0.96rem, 2.8vw, 1.12rem)', color: '#F5F5F5', lineHeight: '1.5', margin: '2px 0 0 0', fontWeight: '500' }}>
                   Baitul Noor, Rose Villa Compound,<br />
                   Aluva Road, Perumbavoor,<br />
                   Kochi

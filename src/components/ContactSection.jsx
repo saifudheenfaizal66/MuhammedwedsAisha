@@ -36,38 +36,18 @@ export default function ContactSection() {
           Feel free to reach out to our families for any assistance or inquiries.
         </p>
 
-        {/* Clean, Non-Glinting Direct Call Contact Button for High Readability */}
-        <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '20px' }}>
+        {/* Family Contacts Primary Action Button matching App Button Styling */}
+        <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '22px' }}>
           <a
             href={`tel:${primaryContact}`}
+            className="btn-gold"
             style={{
-              display: 'inline-flex',
-              alignItems: 'center',
-              gap: '8px',
-              background: 'linear-gradient(135deg, rgba(30, 5, 13, 0.92), rgba(18, 3, 7, 0.95))',
-              color: '#FFF1BA',
-              border: '1.5px solid #D4AF37',
-              borderRadius: '30px',
-              padding: '10px 18px',
-              fontSize: 'clamp(0.85rem, 2.8vw, 0.98rem)',
-              fontWeight: '600',
-              textDecoration: 'none',
-              boxShadow: '0 4px 16px rgba(0, 0, 0, 0.5)',
-              transition: 'all 0.25s ease'
-            }}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.borderColor = '#FFF1BA';
-              e.currentTarget.style.transform = 'translateY(-2px)';
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.borderColor = '#D4AF37';
-              e.currentTarget.style.transform = 'translateY(0)';
+              fontSize: 'clamp(0.88rem, 2.8vw, 1.05rem)',
+              letterSpacing: '0.5px'
             }}
           >
-            <Phone size={16} color="#D4AF37" />
-            <span style={{ color: '#FDFBF7', fontWeight: '600', letterSpacing: '0.3px' }}>
-              Call Contact ({displayContact})
-            </span>
+            <Phone size={18} color="#160308" />
+            <span>Call Family Contact: <strong style={{ textDecoration: 'underline', letterSpacing: '0.8px' }}>{displayContact}</strong></span>
           </a>
         </div>
 

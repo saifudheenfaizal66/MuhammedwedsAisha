@@ -1,165 +1,187 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 
+const getAssetUrl = (path) => {
+  const base = import.meta.env.BASE_URL ? (import.meta.env.BASE_URL.endsWith('/') ? import.meta.env.BASE_URL : `${import.meta.env.BASE_URL}/`) : '/';
+  return encodeURI(`${base}${path.replace(/^\//, '')}`);
+};
+
 export default function CoupleIllustration() {
+  const imageUrl = getAssetUrl('background removed image.png');
+
   return (
-    <div style={{ position: 'relative', width: '100%', maxWidth: '420px', margin: '0 auto', display: 'flex', justifyContent: 'center' }}>
-      {/* Background Glowing Aura Ring */}
+    <div
+      style={{
+        position: 'relative',
+        width: '100%',
+        maxWidth: '520px',
+        margin: '0 auto',
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        justify: 'center'
+      }}
+    >
+      {/* Radiant Warm Gold Sunburst Backlight Glow (Behind Upper Body) */}
       <motion.div
         animate={{
-          scale: [1, 1.06, 1],
-          opacity: [0.35, 0.6, 0.35],
-          rotate: [0, 180, 360]
+          scale: [0.95, 1.06, 0.95],
+          opacity: [0.65, 0.9, 0.65]
         }}
-        transition={{ duration: 12, repeat: Infinity, ease: 'linear' }}
+        transition={{ duration: 4.5, repeat: Infinity, ease: 'easeInOut' }}
         style={{
           position: 'absolute',
-          top: '-10px',
-          width: '320px',
-          height: '320px',
+          top: '12%',
+          width: 'clamp(280px, 52vw, 440px)',
+          height: 'clamp(280px, 52vw, 440px)',
           borderRadius: '50%',
-          background: 'radial-gradient(circle, rgba(212,175,55,0.25) 0%, rgba(255,183,197,0.15) 50%, transparent 70%)',
-          border: '1px dashed rgba(212, 175, 55, 0.4)',
-          pointerEvents: 'none'
+          background: 'radial-gradient(circle, rgba(255, 225, 140, 0.5) 0%, rgba(212, 175, 55, 0.3) 40%, rgba(128, 0, 32, 0.15) 65%, transparent 80%)',
+          filter: 'blur(28px)',
+          pointerEvents: 'none',
+          zIndex: 1
         }}
       />
 
-      {/* Floating Couple Silhouette Vector Container */}
-      <motion.div
-        initial={{ y: 20, opacity: 0 }}
-        whileInView={{ y: 0, opacity: 1 }}
-        viewport={{ once: true }}
-        animate={{ y: [0, -8, 0] }}
-        transition={{
-          y: { duration: 4, repeat: Infinity, ease: 'easeInOut' },
-          opacity: { duration: 1 }
+      {/* Golden Botanical Leaf Branch Flourish — Left Side */}
+      <div
+        style={{
+          position: 'absolute',
+          left: '-25px',
+          top: '38%',
+          transform: 'translateY(-50%)',
+          pointerEvents: 'none',
+          zIndex: 2,
+          opacity: 0.88,
+          filter: 'drop-shadow(0 0 8px rgba(212,175,55,0.4))'
         }}
-        style={{ position: 'relative', zIndex: 5, width: '100%', height: 'auto' }}
       >
-        <svg
-          viewBox="0 0 500 500"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-          style={{ width: '100%', height: 'auto', filter: 'drop-shadow(0 15px 25px rgba(88,17,26,0.18))' }}
-        >
+        <svg width="85" height="190" viewBox="0 0 100 220" fill="none" xmlns="http://www.w3.org/2000/svg">
           <defs>
-            {/* Gradients */}
-            <linearGradient id="groomSherwani" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stopColor="#F9F6F0" />
-              <stop offset="50%" stopColor="#EFE7D8" />
-              <stop offset="100%" stopColor="#D4AF37" />
-            </linearGradient>
-
-            <linearGradient id="groomShawl" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stopColor="#800020" />
-              <stop offset="100%" stopColor="#58111A" />
-            </linearGradient>
-
-            <linearGradient id="brideAttire" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stopColor="#800020" />
-              <stop offset="50%" stopColor="#58111A" />
-              <stop offset="100%" stopColor="#3D0C11" />
-            </linearGradient>
-
-            <linearGradient id="goldAccent" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stopColor="#BF953F" />
-              <stop offset="25%" stopColor="#FCF6BA" />
-              <stop offset="50%" stopColor="#B38728" />
+            <linearGradient id="goldLeafGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stopColor="#FCF6BA" />
+              <stop offset="50%" stopColor="#D4AF37" />
               <stop offset="100%" stopColor="#AA771C" />
             </linearGradient>
-
-            <linearGradient id="dupattaVeil" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stopColor="#FFB7C5" stopOpacity="0.8" />
-              <stop offset="50%" stopColor="#800020" stopOpacity="0.6" />
-              <stop offset="100%" stopColor="#D4AF37" stopOpacity="0.4" />
-            </linearGradient>
-
-            <radialGradient id="sparkleGlow" cx="50%" cy="50%" r="50%">
-              <stop offset="0%" stopColor="#FFF" />
-              <stop offset="100%" stopColor="#D4AF37" stopOpacity="0" />
-            </radialGradient>
           </defs>
-
-          {/* Background Decorative Arch */}
-          <path
-            d="M 120 440 C 120 200, 380 200, 380 440 Z"
-            fill="none"
-            stroke="url(#goldAccent)"
-            strokeWidth="2"
-            strokeDasharray="4 4"
-          />
-
-          {/* GROOM (Left Silhouette - Traditional Sherwani & Turban) */}
-          <g id="groom">
-            {/* Turban/Kulla */}
-            <path d="M 180 140 C 170 110, 210 90, 230 115 C 240 100, 260 110, 250 135 C 235 150, 195 155, 180 140 Z" fill="url(#groomShawl)" />
-            {/* Turban Jewel (Kalgi) */}
-            <path d="M 225 105 Q 225 90 220 80 Q 230 90 225 105 Z" fill="url(#goldAccent)" />
-            <circle cx="225" cy="108" r="4" fill="#800020" />
-
-            {/* Groom Head (Faceless Minimalist Ivory-Beige Tone) */}
-            <path d="M 195 135 C 190 160, 200 185, 220 190 C 235 185, 240 160, 235 135 Z" fill="#F4E0D0" />
-
-            {/* Groom Neck & Collar */}
-            <path d="M 205 185 L 235 185 L 240 210 L 200 210 Z" fill="#EFE7D8" stroke="url(#goldAccent)" strokeWidth="2" />
-
-            {/* Groom Sherwani Body */}
-            <path d="M 160 210 C 180 210, 220 210, 245 220 L 255 440 L 140 440 Z" fill="url(#groomSherwani)" stroke="#D4AF37" strokeWidth="1.5" />
-
-            {/* Groom Royal Shawl/Dupatta Draped Across Shoulder */}
-            <path d="M 155 225 C 190 240, 220 300, 230 440 L 180 440 C 170 340, 150 260, 155 225 Z" fill="url(#groomShawl)" opacity="0.9" />
-
-            {/* Gold Buttons & Embroidery on Sherwani */}
-            <line x1="210" y1="215" x2="210" y2="380" stroke="url(#goldAccent)" strokeWidth="2.5" />
-            <circle cx="210" cy="235" r="2.5" fill="#58111A" />
-            <circle cx="210" cy="260" r="2.5" fill="#58111A" />
-            <circle cx="210" cy="285" r="2.5" fill="#58111A" />
-            <circle cx="210" cy="310" r="2.5" fill="#58111A" />
-          </g>
-
-          {/* BRIDE (Right Silhouette - Traditional Embroidered Lehenga & Veiled Dupatta) */}
-          <g id="bride">
-            {/* Bride Head (Faceless Minimalist Warm Skin Tone) */}
-            <path d="M 275 145 C 270 170, 280 190, 295 195 C 310 190, 315 170, 310 145 Z" fill="#F4E0D0" />
-
-            {/* Golden Maang Tikka / Matha Patti Hair Ornament */}
-            <path d="M 285 145 L 295 145" stroke="url(#goldAccent)" strokeWidth="2" />
-            <circle cx="295" cy="150" r="3" fill="url(#goldAccent)" />
-
-            {/* Bride Draped Hijab / Translucent Veil (Dupatta) */}
-            <path
-              d="M 265 140 C 260 120, 325 120, 325 145 C 335 180, 345 280, 355 440 L 265 440 C 265 320, 260 190, 265 140 Z"
-              fill="url(#dupattaVeil)"
-              stroke="url(#goldAccent)"
-              strokeWidth="1.5"
-            />
-
-            {/* Bride Embroidered Blouse & Lehenga Attire */}
-            <path d="M 260 215 C 280 210, 320 210, 340 220 L 365 440 L 255 440 Z" fill="url(#brideAttire)" stroke="url(#goldAccent)" strokeWidth="1.5" />
-
-            {/* Golden Zari & Henna Floral Motifs on Lehenga */}
-            <path d="M 270 260 Q 310 280 345 260" stroke="url(#goldAccent)" strokeWidth="2" fill="none" />
-            <path d="M 265 320 Q 310 345 355 320" stroke="url(#goldAccent)" strokeWidth="2" fill="none" />
-            <path d="M 260 380 Q 310 405 360 380" stroke="url(#goldAccent)" strokeWidth="2" fill="none" />
-
-            {/* Henna Detail on Hand (Minimalist overlay) */}
-            <path d="M 250 300 Q 260 310 255 320" stroke="#800020" strokeWidth="2" fill="none" />
-          </g>
-
-          {/* Front Center Rose Bouquet Accent */}
-          <g id="flowerBouquet" transform="translate(230, 290)">
-            <circle cx="20" cy="20" r="14" fill="#800020" />
-            <circle cx="12" cy="14" r="10" fill="#FFB7C5" />
-            <circle cx="28" cy="14" r="10" fill="#D4AF37" />
-            <path d="M 20 34 Q 10 50 0 60 M 20 34 Q 30 50 40 60" stroke="#58111A" strokeWidth="2" />
-          </g>
-
-          {/* Floating Gold Sparkle Stars */}
-          <path d="M 120 160 L 123 166 L 130 167 L 125 172 L 126 179 L 120 175 L 114 179 L 115 172 L 110 167 L 117 166 Z" fill="url(#goldAccent)" />
-          <path d="M 370 140 L 372 144 L 377 145 L 373 149 L 374 154 L 370 151 L 366 154 L 367 149 L 363 145 L 368 144 Z" fill="url(#goldAccent)" />
-          <path d="M 250 80 L 253 87 L 260 88 L 255 93 L 256 100 L 250 96 L 244 100 L 245 93 L 240 88 L 247 87 Z" fill="url(#goldAccent)" />
+          <path d="M90 210 Q50 130 15 10" stroke="url(#goldLeafGrad)" strokeWidth="2.5" fill="none" />
+          <path d="M75 170 C50 150 40 175 70 180 C80 182 78 172 75 170 Z" fill="url(#goldLeafGrad)" />
+          <path d="M55 130 C30 110 20 135 50 140 C60 142 58 132 55 130 Z" fill="url(#goldLeafGrad)" />
+          <path d="M35 85 C15 65 5 90 30 95 C40 97 38 87 35 85 Z" fill="url(#goldLeafGrad)" />
+          <path d="M20 40 C5 25 0 45 18 50 C24 52 22 42 20 40 Z" fill="url(#goldLeafGrad)" />
         </svg>
+      </div>
+
+      {/* Golden Botanical Leaf Branch Flourish — Right Side */}
+      <div
+        style={{
+          position: 'absolute',
+          right: '-25px',
+          top: '38%',
+          transform: 'translateY(-50%) scaleX(-1)',
+          pointerEvents: 'none',
+          zIndex: 2,
+          opacity: 0.88,
+          filter: 'drop-shadow(0 0 8px rgba(212,175,55,0.4))'
+        }}
+      >
+        <svg width="85" height="190" viewBox="0 0 100 220" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M90 210 Q50 130 15 10" stroke="url(#goldLeafGrad)" strokeWidth="2.5" fill="none" />
+          <path d="M75 170 C50 150 40 175 70 180 C80 182 78 172 75 170 Z" fill="url(#goldLeafGrad)" />
+          <path d="M55 130 C30 110 20 135 50 140 C60 142 58 132 55 130 Z" fill="url(#goldLeafGrad)" />
+          <path d="M35 85 C15 65 5 90 30 95 C40 97 38 87 35 85 Z" fill="url(#goldLeafGrad)" />
+          <path d="M20 40 C5 25 0 45 18 50 C24 52 22 42 20 40 Z" fill="url(#goldLeafGrad)" />
+        </svg>
+      </div>
+
+      {/* Floating Gold Sparkle Dust */}
+      <motion.div
+        animate={{ opacity: [0.4, 0.9, 0.4], scale: [0.95, 1.05, 0.95] }}
+        transition={{ duration: 3.5, repeat: Infinity, ease: 'easeInOut' }}
+        style={{ position: 'absolute', inset: 0, pointerEvents: 'none', zIndex: 3 }}
+      >
+        <div style={{ position: 'absolute', top: '18%', left: '18%', color: '#FCF6BA', fontSize: '14px', filter: 'drop-shadow(0 0 6px #FCF6BA)' }}>✦</div>
+        <div style={{ position: 'absolute', top: '32%', right: '16%', color: '#D4AF37', fontSize: '12px' }}>✧</div>
+        <div style={{ position: 'absolute', bottom: '26%', left: '14%', color: '#F7E7B4', fontSize: '15px' }}>✦</div>
+        <div style={{ position: 'absolute', bottom: '34%', right: '20%', color: '#FFF1BA', fontSize: '13px' }}>✧</div>
       </motion.div>
+
+      {/* Transparent Floating Bride & Groom PNG Image (Zero background boxes or wrapper shapes) */}
+      <motion.div
+        initial={{ y: 20, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: 1, ease: 'easeOut' }}
+        style={{
+          position: 'relative',
+          zIndex: 5,
+          width: '100%',
+          maxWidth: 'clamp(300px, 50vw, 440px)',
+          display: 'flex',
+          justify: 'center',
+          alignItems: 'center',
+          background: 'transparent',
+          backgroundColor: 'transparent'
+        }}
+      >
+        <motion.img
+          animate={{ y: [0, -6, 0] }}
+          transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut' }}
+          src={imageUrl}
+          alt="Mohammed & Aisha Bride and Groom"
+          style={{
+            width: '100%',
+            height: 'auto',
+            maxHeight: 'clamp(350px, 60vw, 500px)',
+            objectFit: 'contain',
+            background: 'transparent',
+            backgroundColor: 'transparent',
+            border: 'none',
+            outline: 'none',
+            boxShadow: 'none',
+            filter: `
+              drop-shadow(0 22px 38px rgba(0, 0, 0, 0.9))
+              drop-shadow(0 0 28px rgba(212, 175, 55, 0.45))
+            `,
+            display: 'block'
+          }}
+        />
+      </motion.div>
+
+      {/* Bottom Pill Badge — M & A — with Extending Gold Lines */}
+      <div
+        style={{
+          position: 'relative',
+          zIndex: 6,
+          marginTop: '-6px',
+          width: '100%',
+          maxWidth: '400px',
+          display: 'flex',
+          alignItems: 'center',
+          justify: 'center',
+          gap: '0px'
+        }}
+      >
+        <span style={{ flex: 1, height: '1px', background: 'linear-gradient(to right, transparent, rgba(212, 175, 55, 0.85))' }}></span>
+        <div
+          style={{
+            background: 'rgba(18, 3, 7, 0.88)',
+            border: '1.5px solid rgba(212, 175, 55, 0.8)',
+            boxShadow: '0 0 16px rgba(212, 175, 55, 0.38), inset 0 0 10px rgba(212, 175, 55, 0.15)',
+            borderRadius: '24px',
+            padding: '5px 24px',
+            color: '#F7E7B4',
+            fontFamily: "'Cinzel Decorative', serif",
+            fontSize: '0.88rem',
+            fontWeight: 'bold',
+            letterSpacing: '3px',
+            whiteSpace: 'nowrap'
+          }}
+        >
+          — M &amp; A —
+        </div>
+        <span style={{ flex: 1, height: '1px', background: 'linear-gradient(to left, transparent, rgba(212, 175, 55, 0.85))' }}></span>
+      </div>
     </div>
   );
 }
+
+

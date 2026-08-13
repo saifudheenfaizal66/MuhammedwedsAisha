@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Calendar, Sparkles, Heart } from 'lucide-react';
+import CoupleIllustration from './CoupleIllustration.jsx';
 
 export default function HeroSection() {
   // Target Nikkah Date: September 10, 2026 at 11:00 AM IST
@@ -36,108 +37,116 @@ export default function HeroSection() {
   }, [nikkahDate]);
 
   return (
-    <section className="section-container" style={{ textAlign: 'center', paddingTop: 'clamp(20px, 5vw, 45px)', paddingBottom: 'clamp(16px, 3.5vw, 35px)' }}>
-      {/* Islamic Bismillah & Invocation Header */}
+    <section className="section-container" style={{ textAlign: 'center', paddingTop: 'clamp(15px, 4vw, 35px)', paddingBottom: 'clamp(16px, 3.5vw, 35px)', background: 'transparent' }}>
+      {/* Arabic Bismillah & Subtitle */}
       <motion.div
-        initial={{ opacity: 0, y: -20 }}
+        initial={{ opacity: 0, y: -15 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, delay: 0.2 }}
-        style={{ marginBottom: '22px' }}
+        style={{ marginBottom: '16px' }}
       >
-        <p className="font-calligraphy" style={{ fontSize: 'clamp(1.7rem, 5.5vw, 3.2rem)', color: '#D4AF37', marginBottom: '6px', filter: 'drop-shadow(0 2px 12px rgba(0,0,0,0.8))', lineHeight: 1.3 }}>
+        <p className="font-calligraphy" style={{ fontSize: 'clamp(1.6rem, 5vw, 2.8rem)', color: '#D4AF37', marginBottom: '2px', filter: 'drop-shadow(0 2px 10px rgba(0,0,0,0.8))', lineHeight: 1.2 }}>
           بِسْمِ ٱللَّٰهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ
         </p>
-        
-        {/* Requirement 3: Header / Invocation exact text */}
-        <p className="font-cinzel" style={{ fontSize: 'clamp(0.85rem, 2.8vw, 1.2rem)', color: '#F7E7B4', marginBottom: '10px', fontWeight: 600, letterSpacing: '0.5px' }}>
-          "In the Name of Allah, the Most Beneficent, the Most Merciful"
-        </p>
-
-        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '12px', maxWidth: '280px', margin: '0 auto 14px auto' }}>
-          <span style={{ flex: 1, height: '1px', background: 'linear-gradient(to right, transparent, #D4AF37)' }}></span>
-          <Sparkles size={14} color="#D4AF37" />
-          <span style={{ flex: 1, height: '1px', background: 'linear-gradient(to left, transparent, #D4AF37)' }}></span>
-        </div>
-        
         <p className="font-cinzel" style={{ fontSize: 'clamp(0.68rem, 2.2vw, 0.85rem)', letterSpacing: 'clamp(1.5px, 0.8vw, 3.5px)', textTransform: 'uppercase', color: '#C5A059', fontWeight: 'bold' }}>
-          CORDIALLY INVITES YOU TO THE NIKKAH CEREMONY OF
+          CORDIALLY INVITES YOU TO THE NIKKAH CEREMONY
         </p>
       </motion.div>
 
-      {/* Groom & Bride Names Display */}
+      {/* TOP SECTION: "OF", "Mohammed", "with", "Aisha" Calligraphy with Shimmering Star Divider */}
       <motion.div
         initial={{ opacity: 0, scale: 0.95 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 1, delay: 0.4 }}
-        style={{ margin: '16px 0 24px 0' }}
+        style={{ margin: '10px 0 16px 0' }}
       >
-        <div style={{ filter: 'drop-shadow(0 4px 20px rgba(0, 0, 0, 0.9))' }}>
+        {/* OF */}
+        <p className="font-cinzel" style={{ fontSize: 'clamp(0.75rem, 2.4vw, 0.92rem)', color: '#C5A059', letterSpacing: '5px', fontWeight: 'bold', margin: '0 0 4px 0', textTransform: 'uppercase' }}>
+          OF
+        </p>
+
+        {/* Mohammed */}
+        <div style={{ filter: 'drop-shadow(0 4px 25px rgba(0, 0, 0, 0.95)) drop-shadow(0 0 25px rgba(212, 175, 55, 0.4))' }}>
           <h1
             className="font-alex text-gold-gradient"
             style={{
-              fontSize: 'clamp(2.6rem, 10vw, 6rem)',
-              lineHeight: '1.05',
+              fontSize: 'clamp(3.4rem, 11.5vw, 6.8rem)',
+              lineHeight: '0.98',
               margin: '0',
-              wordBreak: 'break-word'
+              wordBreak: 'break-word',
+              letterSpacing: '1px'
             }}
           >
             Mohammed
           </h1>
         </div>
 
-        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '12px', margin: '8px 0' }}>
-          <span style={{ width: 'clamp(25px, 10vw, 70px)', height: '1px', background: 'linear-gradient(to right, transparent, #D4AF37)' }}></span>
-          <span className="font-calligraphy" style={{ fontSize: 'clamp(1.8rem, 5.5vw, 3rem)', color: '#F7E7B4' }}>with</span>
-          <span style={{ width: 'clamp(25px, 10vw, 70px)', height: '1px', background: 'linear-gradient(to left, transparent, #D4AF37)' }}></span>
+        {/* — with — */}
+        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '14px', margin: '6px 0' }}>
+          <span style={{ width: 'clamp(25px, 9vw, 65px)', height: '1px', background: 'linear-gradient(to right, transparent, rgba(212, 175, 55, 0.8))' }}></span>
+          <span className="font-calligraphy" style={{ fontSize: 'clamp(1.6rem, 4.8vw, 2.6rem)', color: '#F7E7B4', fontStyle: 'italic' }}>with</span>
+          <span style={{ width: 'clamp(25px, 9vw, 65px)', height: '1px', background: 'linear-gradient(to left, transparent, rgba(212, 175, 55, 0.8))' }}></span>
         </div>
 
-        <div style={{ filter: 'drop-shadow(0 4px 20px rgba(0, 0, 0, 0.9))' }}>
+        {/* Aisha */}
+        <div style={{ filter: 'drop-shadow(0 4px 25px rgba(0, 0, 0, 0.95)) drop-shadow(0 0 25px rgba(212, 175, 55, 0.4))' }}>
           <h1
             className="font-alex text-gold-gradient"
             style={{
-              fontSize: 'clamp(2.6rem, 10vw, 6rem)',
-              lineHeight: '1.05',
-              margin: '0',
-              wordBreak: 'break-word'
+              fontSize: 'clamp(3.4rem, 11.5vw, 6.8rem)',
+              lineHeight: '0.98',
+              margin: '0 0 12px 0',
+              wordBreak: 'break-word',
+              letterSpacing: '1px'
             }}
           >
             Aisha
           </h1>
         </div>
+
+        {/* Star Motif Line Divider */}
+        <motion.div
+          animate={{ opacity: [0.6, 1, 0.6], scale: [0.98, 1.03, 0.98] }}
+          transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
+          style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '14px', maxWidth: '300px', margin: '0 auto' }}
+        >
+          <span style={{ flex: 1, height: '1px', background: 'linear-gradient(to right, transparent, #D4AF37)' }}></span>
+          <span style={{ color: '#D4AF37', fontSize: '18px', filter: 'drop-shadow(0 0 8px #D4AF37)' }}>✦</span>
+          <span style={{ flex: 1, height: '1px', background: 'linear-gradient(to left, transparent, #D4AF37)' }}></span>
+        </motion.div>
       </motion.div>
 
-      {/* Theme-based Countdown Section (Immediately below Groom & Bride Names) */}
+      {/* CENTERPIECE: Transparent Floating Bride & Groom PNG Image */}
+      <CoupleIllustration />
+
+      {/* BOTTOM SECTION: Premium Countdown Timer & Date Details */}
       <motion.div
         initial={{ opacity: 0, y: 35 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.25 }}
         transition={{ duration: 0.8, delay: 0.1, ease: 'easeOut' }}
-        className="gold-border-card"
         style={{
-          padding: 'clamp(18px, 4vw, 30px) clamp(10px, 3vw, 22px)',
-          display: 'inline-block',
           width: '100%',
           maxWidth: '680px',
-          margin: '0 auto 30px auto',
-          background: 'linear-gradient(135deg, rgba(22, 3, 8, 0.60), rgba(42, 7, 19, 0.50))'
+          margin: '25px auto 30px auto'
         }}
       >
-        {/* Elegant Theme-Based Countdown Heading */}
-        <div style={{ marginBottom: '16px' }}>
-          <div style={{ display: 'inline-flex', alignItems: 'center', gap: '6px', marginBottom: '4px' }}>
-            <Calendar size={15} color="#D4AF37" />
-            <span className="font-cinzel" style={{ fontSize: 'clamp(0.7rem, 2.2vw, 0.88rem)', letterSpacing: '1.5px', color: '#D4AF37', fontWeight: 'bold', textTransform: 'uppercase' }}>
+        {/* Countdown Typography Heading */}
+        <div style={{ marginBottom: '18px' }}>
+          <div style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', marginBottom: '6px' }}>
+            <Calendar size={16} color="#D4AF37" />
+            <span className="font-cinzel" style={{ fontSize: 'clamp(0.72rem, 2.3vw, 0.9rem)', letterSpacing: '2px', color: '#D4AF37', fontWeight: 'bold', textTransform: 'uppercase' }}>
               COUNTDOWN TO THE BLESSED CEREMONY
             </span>
-            <Sparkles size={15} color="#D4AF37" />
+            <Sparkles size={16} color="#D4AF37" />
           </div>
-          <h3 className="font-cinzel text-gold-gradient" style={{ fontSize: 'clamp(1rem, 3.4vw, 1.45rem)', fontWeight: 'bold', margin: 0, letterSpacing: '0.5px' }}>
-            Thursday, September 10, 2026
+          <h3 className="font-cinzel text-gold-gradient" style={{ fontSize: 'clamp(1.15rem, 3.8vw, 1.6rem)', fontWeight: 'bold', margin: 0, letterSpacing: '1px', textTransform: 'uppercase' }}>
+            THURSDAY, SEPTEMBER 10, 2026
           </h3>
         </div>
 
-        {/* Live Minimalist Timer Grid */}
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 'clamp(4px, 1.8vw, 12px)' }}>
+        {/* 4 Sleek Timer Boxes with Thin Gold Metallic Borders */}
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 'clamp(6px, 2vw, 14px)' }}>
           {[
             { label: 'DAYS', value: timeLeft.days },
             { label: 'HOURS', value: timeLeft.hours },
@@ -147,17 +156,18 @@ export default function HeroSection() {
             <div
               key={idx}
               style={{
-                background: 'linear-gradient(135deg, rgba(255, 255, 255, 0.05), rgba(61, 12, 28, 0.3))',
-                padding: 'clamp(8px, 2vw, 14px) clamp(2px, 0.8vw, 8px)',
-                borderRadius: '12px',
-                border: '1px solid rgba(212, 175, 55, 0.4)',
-                boxShadow: 'inset 0 0 120px rgba(212, 175, 55, 0.05)'
+                background: 'rgba(18, 3, 7, 0.72)',
+                padding: 'clamp(10px, 2.2vw, 16px) clamp(4px, 1vw, 10px)',
+                borderRadius: '16px',
+                border: '1.2px solid rgba(212, 175, 55, 0.55)',
+                boxShadow: '0 8px 24px rgba(0, 0, 0, 0.5), inset 0 0 15px rgba(212, 175, 55, 0.1)',
+                backdropFilter: 'blur(10px)'
               }}
             >
-              <div className="font-cinzel text-gold-gradient" style={{ fontSize: 'clamp(1.05rem, 4.5vw, 2.2rem)', fontWeight: 'bold', lineHeight: '1.1' }}>
+              <div className="font-cinzel text-gold-gradient" style={{ fontSize: 'clamp(1.25rem, 5vw, 2.5rem)', fontWeight: 'bold', lineHeight: '1.1', filter: 'drop-shadow(0 2px 8px rgba(0,0,0,0.8))' }}>
                 {String(item.value).padStart(2, '0')}
               </div>
-              <div className="font-sans" style={{ fontSize: 'clamp(0.52rem, 1.6vw, 0.68rem)', letterSpacing: '0.5px', color: '#F7E7B4', marginTop: '4px', fontWeight: '600', opacity: 0.95 }}>
+              <div className="font-sans" style={{ fontSize: 'clamp(0.55rem, 1.7vw, 0.72rem)', letterSpacing: '1px', color: '#F7E7B4', marginTop: '6px', fontWeight: '700', textTransform: 'uppercase', opacity: 0.95 }}>
                 {item.label}
               </div>
             </div>
@@ -165,7 +175,7 @@ export default function HeroSection() {
         </div>
       </motion.div>
 
-      {/* Main English Invitation Text Card ("With the grace and blessings...") */}
+      {/* Main English Invitation Text Card */}
       <motion.div
         initial={{ opacity: 0, y: 35 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -176,7 +186,7 @@ export default function HeroSection() {
           maxWidth: '760px',
           margin: '0 auto 30px auto',
           padding: 'clamp(18px, 4vw, 32px) clamp(12px, 3.5vw, 26px)',
-          background: 'linear-gradient(135deg, rgba(35, 6, 15, 0.58), rgba(61, 12, 28, 0.48))'
+          background: 'linear-gradient(135deg, rgba(35, 6, 15, 0.62), rgba(61, 12, 28, 0.52))'
         }}
       >
         <div style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', width: '36px', height: '36px', borderRadius: '50%', background: 'rgba(212, 175, 55, 0.15)', marginBottom: '10px' }}>
@@ -195,5 +205,6 @@ export default function HeroSection() {
     </section>
   );
 }
+
 
 

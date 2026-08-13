@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const getAssetUrl = (path) => {
@@ -13,10 +13,22 @@ export default function BackgroundLayer() {
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentIdx((prev) => (prev + 1) % images.length);
-    }, 6000);
+    }, 7000);
 
     return () => clearInterval(timer);
   }, [images.length]);
+
+  // Generate deterministic particles for golden light dust effect
+  const particles = useMemo(() => {
+    return Array.from({ length: 22 }, (_, i) => ({
+      id: i,
+      left: `${(i * 17 + 7) % 100}%`,
+      top: `${(i * 23 + 12) % 100}%`,
+      size: `${(i % 3) * 2 + 2}px`,
+      duration: 6 + (i % 5) * 2,
+      delay: (i % 4) * 1.2
+    }));
+  }, []);
 
   return (
     <div
@@ -30,51 +42,94 @@ export default function BackgroundLayer() {
         zIndex: 0,
         pointerEvents: 'none',
         overflow: 'hidden',
-        backgroundColor: '#160308'
+        backgroundColor: '#120206'
       }}
     >
+      {/* Background Slideshow Layer */}
       <AnimatePresence mode="sync">
         <motion.div
           key={images[currentIdx]}
           initial={{ opacity: 0, scale: 1.05 }}
-          animate={{ opacity: 1, scale: 1 }}
+          animate={{ opacity: 0.85, scale: 1 }}
           exit={{ opacity: 0 }}
-          transition={{ duration: 1.8, ease: 'easeInOut' }}
+          transition={{ duration: 2, ease: 'easeInOut' }}
           style={{
             position: 'absolute',
             inset: 0,
-            backgroundColor: '#160308',
+            backgroundColor: '#120206',
             isolation: 'isolate',
             transform: 'translateZ(0)'
           }}
         >
           <img
             src={images[currentIdx]}
-            alt="Wedding Background"
+            alt="Wedding Ambient Background"
             style={{
               width: '100%',
               height: '100%',
               objectFit: 'cover',
               objectPosition: 'center',
               display: 'block',
-              backgroundColor: '#160308'
+              filter: 'brightness(0.7) contrast(1.1)'
             }}
           />
         </motion.div>
       </AnimatePresence>
 
-      {/* Deep Burgundy & Charcoal Vignette Overlay - Reduced Opacity for Higher Image Visibility */}
+      {/* Subtle Islamic Geometric Star Pattern Overlay Watermark */}
+      <div
+        style={{
+          position: 'absolute',
+          inset: 0,
+          opacity: 0.06,
+          backgroundImage: `url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23D4AF37' fill-opacity='1' fill-rule='evenodd'%3E%3Cpath d='M40 0l10 30h30l-24 18 9 32-25-19-25 19 9-32-24-18h30zM40 40l5 15h15l-12 9 4 16-12-9-12 9 4-16-12-9h15z'/%3E%3C/g%3E%3C/svg%3E")`,
+          backgroundRepeat: 'repeat',
+          backgroundSize: '80px 80px'
+        }}
+      />
+
+      {/* Deep Burgundy & Charcoal Cinematic Vignette */}
       <div
         style={{
           position: 'absolute',
           inset: 0,
           background: `
-            radial-gradient(circle at 50% 35%, rgba(42, 7, 19, 0.20) 0%, rgba(18, 3, 7, 0.55) 100%),
-            linear-gradient(to bottom, rgba(22, 3, 8, 0.30) 0%, rgba(61, 12, 28, 0.15) 50%, rgba(18, 3, 7, 0.60) 100%)
+            radial-gradient(circle at 50% 40%, rgba(212, 175, 55, 0.14) 0%, rgba(42, 7, 19, 0.45) 50%, rgba(18, 2, 6, 0.85) 100%),
+            linear-gradient(to bottom, rgba(18, 2, 6, 0.45) 0%, rgba(61, 12, 28, 0.20) 50%, rgba(18, 2, 6, 0.90) 100%)
           `
         }}
       />
+
+      {/* Floating Golden Light Dust Particles */}
+      {particles.map((p) => (
+        <motion.div
+          key={p.id}
+          animate={{
+            y: [0, -40, 0],
+            opacity: [0.1, 0.7, 0.1],
+            scale: [0.8, 1.2, 0.8]
+          }}
+          transition={{
+            duration: p.duration,
+            repeat: Infinity,
+            delay: p.delay,
+            ease: 'easeInOut'
+          }}
+          style={{
+            position: 'absolute',
+            left: p.left,
+            top: p.top,
+            width: p.size,
+            height: p.size,
+            borderRadius: '50%',
+            backgroundColor: '#F7E7B4',
+            boxShadow: '0 0 10px #D4AF37, 0 0 20px #D4AF37',
+            pointerEvents: 'none'
+          }}
+        />
+      ))}
     </div>
   );
 }
+
 
