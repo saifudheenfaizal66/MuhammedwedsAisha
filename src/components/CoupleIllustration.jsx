@@ -42,56 +42,7 @@ export default function CoupleIllustration() {
         }}
       />
 
-      {/* Golden Botanical Leaf Branch Flourish — Left Side */}
-      <div
-        style={{
-          position: 'absolute',
-          left: '-25px',
-          top: '38%',
-          transform: 'translateY(-50%)',
-          pointerEvents: 'none',
-          zIndex: 2,
-          opacity: 0.88,
-          filter: 'drop-shadow(0 0 8px rgba(212,175,55,0.4))'
-        }}
-      >
-        <svg width="85" height="190" viewBox="0 0 100 220" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <defs>
-            <linearGradient id="goldLeafGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stopColor="#FCF6BA" />
-              <stop offset="50%" stopColor="#D4AF37" />
-              <stop offset="100%" stopColor="#AA771C" />
-            </linearGradient>
-          </defs>
-          <path d="M90 210 Q50 130 15 10" stroke="url(#goldLeafGrad)" strokeWidth="2.5" fill="none" />
-          <path d="M75 170 C50 150 40 175 70 180 C80 182 78 172 75 170 Z" fill="url(#goldLeafGrad)" />
-          <path d="M55 130 C30 110 20 135 50 140 C60 142 58 132 55 130 Z" fill="url(#goldLeafGrad)" />
-          <path d="M35 85 C15 65 5 90 30 95 C40 97 38 87 35 85 Z" fill="url(#goldLeafGrad)" />
-          <path d="M20 40 C5 25 0 45 18 50 C24 52 22 42 20 40 Z" fill="url(#goldLeafGrad)" />
-        </svg>
-      </div>
 
-      {/* Golden Botanical Leaf Branch Flourish — Right Side */}
-      <div
-        style={{
-          position: 'absolute',
-          right: '-25px',
-          top: '38%',
-          transform: 'translateY(-50%) scaleX(-1)',
-          pointerEvents: 'none',
-          zIndex: 2,
-          opacity: 0.88,
-          filter: 'drop-shadow(0 0 8px rgba(212,175,55,0.4))'
-        }}
-      >
-        <svg width="85" height="190" viewBox="0 0 100 220" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M90 210 Q50 130 15 10" stroke="url(#goldLeafGrad)" strokeWidth="2.5" fill="none" />
-          <path d="M75 170 C50 150 40 175 70 180 C80 182 78 172 75 170 Z" fill="url(#goldLeafGrad)" />
-          <path d="M55 130 C30 110 20 135 50 140 C60 142 58 132 55 130 Z" fill="url(#goldLeafGrad)" />
-          <path d="M35 85 C15 65 5 90 30 95 C40 97 38 87 35 85 Z" fill="url(#goldLeafGrad)" />
-          <path d="M20 40 C5 25 0 45 18 50 C24 52 22 42 20 40 Z" fill="url(#goldLeafGrad)" />
-        </svg>
-      </div>
 
       {/* Floating Gold Sparkle Dust */}
       <motion.div

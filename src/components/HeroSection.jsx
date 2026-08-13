@@ -43,12 +43,12 @@ export default function HeroSection() {
         initial={{ opacity: 0, y: -15 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, delay: 0.2 }}
-        style={{ marginBottom: '16px' }}
+        style={{ marginBottom: '20px' }}
       >
-        <p className="font-calligraphy" style={{ fontSize: 'clamp(1.6rem, 5vw, 2.8rem)', color: '#D4AF37', marginBottom: '2px', filter: 'drop-shadow(0 2px 10px rgba(0,0,0,0.8))', lineHeight: 1.2 }}>
+        <p className="font-calligraphy" style={{ fontSize: 'clamp(1.6rem, 5vw, 2.8rem)', color: '#D4AF37', marginBottom: '14px', filter: 'drop-shadow(0 2px 10px rgba(0,0,0,0.8))', lineHeight: 1.2 }}>
           بِسْمِ ٱللَّٰهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ
         </p>
-        <p className="font-cinzel" style={{ fontSize: 'clamp(0.68rem, 2.2vw, 0.85rem)', letterSpacing: 'clamp(1.5px, 0.8vw, 3.5px)', textTransform: 'uppercase', color: '#C5A059', fontWeight: 'bold' }}>
+        <p className="font-cinzel" style={{ fontSize: 'clamp(0.68rem, 2.2vw, 0.85rem)', letterSpacing: 'clamp(1.5px, 0.8vw, 3.5px)', textTransform: 'uppercase', color: '#FFFFFF', fontWeight: 'bold' }}>
           CORDIALLY INVITES YOU TO THE NIKKAH CEREMONY
         </p>
       </motion.div>
