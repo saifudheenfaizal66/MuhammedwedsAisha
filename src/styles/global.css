@@ -67,8 +67,9 @@ canvas {
   background: transparent !important;
 }
 
-/* Hardware-Accelerated Fixed Confetti Overlay Canvas */
-.confetti-canvas {
+/* Hardware-Accelerated Fixed Confetti Overlay Canvas & Layer */
+.confetti-canvas,
+.confetti-layer {
   position: fixed !important;
   inset: 0 !important;
   top: 0 !important;
@@ -88,6 +89,7 @@ canvas {
 
 /* 3D Hardware Accelerated Particle Animation Utilities */
 .confetti-particle {
+  position: absolute !important;
   pointer-events: none !important;
   will-change: transform, opacity;
   transform: translate3d(0, 0, 0);
@@ -98,11 +100,30 @@ canvas {
 
 @keyframes confettiFall3D {
   0% {
-    transform: translate3d(0, -10px, 0) rotate(0deg);
+    transform: translate3d(0, -12px, 0) rotate(0deg);
+    -webkit-transform: translate3d(0, -12px, 0) rotate(0deg);
+    opacity: 1;
+  }
+  50% {
     opacity: 1;
   }
   100% {
-    transform: translate3d(var(--particle-x, 0px), 100vh, 0) rotate(var(--particle-rot, 360deg));
+    transform: translate3d(var(--particle-x, 0px), 105vh, 0) rotate(var(--particle-rot, 360deg));
+    -webkit-transform: translate3d(var(--particle-x, 0px), 105vh, 0) rotate(var(--particle-rot, 360deg));
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes confettiFall3D {
+  0% {
+    -webkit-transform: translate3d(0, -12px, 0) rotate(0deg);
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translate3d(var(--particle-x, 0px), 105vh, 0) rotate(var(--particle-rot, 360deg));
     opacity: 0;
   }
 }
