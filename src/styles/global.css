@@ -132,6 +132,52 @@ img {
   background-color: #160308;
 }
 
+/* Ambient Background Dust Particles (Hardware-Accelerated Pure CSS) */
+.dust-particle {
+  position: absolute !important;
+  pointer-events: none !important;
+  border-radius: 50%;
+  background-color: #F7E7B4;
+  box-shadow: 0 0 8px #D4AF37;
+  will-change: transform, opacity;
+  transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  animation: dustFloat3D var(--dust-duration, 8s) ease-in-out var(--dust-delay, 0s) infinite alternate;
+  -webkit-animation: dustFloat3D var(--dust-duration, 8s) ease-in-out var(--dust-delay, 0s) infinite alternate;
+}
+
+@keyframes dustFloat3D {
+  0% {
+    transform: translate3d(0, 0, 0) scale(0.8);
+    -webkit-transform: translate3d(0, 0, 0) scale(0.8);
+    opacity: 0.15;
+  }
+  50% {
+    opacity: 0.7;
+  }
+  100% {
+    transform: translate3d(0, -45px, 0) scale(1.25);
+    -webkit-transform: translate3d(0, -45px, 0) scale(1.25);
+    opacity: 0.2;
+  }
+}
+
+@-webkit-keyframes dustFloat3D {
+  0% {
+    -webkit-transform: translate3d(0, 0, 0) scale(0.8);
+    opacity: 0.15;
+  }
+  50% {
+    opacity: 0.7;
+  }
+  100% {
+    -webkit-transform: translate3d(0, -45px, 0) scale(1.25);
+    opacity: 0.2;
+  }
+}
+
 /* Typography Helpers */
 .font-cinzel {
   font-family: 'Cinzel Decorative', 'Cinzel', 'Georgia', 'Times New Roman', serif;
