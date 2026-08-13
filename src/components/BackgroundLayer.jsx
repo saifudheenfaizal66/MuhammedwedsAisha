@@ -124,7 +124,11 @@ export default function BackgroundLayer() {
             borderRadius: '50%',
             backgroundColor: '#F7E7B4',
             boxShadow: '0 0 10px #D4AF37, 0 0 20px #D4AF37',
-            pointerEvents: 'none'
+            pointerEvents: 'none',
+            willChange: 'transform, opacity',
+            transform: 'translateZ(0)',
+            WebkitBackfaceVisibility: 'hidden',
+            backfaceVisibility: 'hidden'
           }}
         />
       ))}

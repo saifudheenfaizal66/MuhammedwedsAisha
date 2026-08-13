@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import confetti from 'canvas-confetti';
+import { triggerConfetti } from '../utils/confetti.js';
 import { Heart, MessageCircle } from 'lucide-react';
 
 export default function RSVPForm() {
@@ -9,7 +9,7 @@ export default function RSVPForm() {
   const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
 
   const handleRSVPClick = (e) => {
-    confetti({
+    triggerConfetti({
       particleCount: 100,
       spread: 90,
       origin: { y: 0.6 },

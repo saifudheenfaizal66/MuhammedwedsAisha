@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import confetti from 'canvas-confetti';
+import { triggerConfetti } from '../utils/confetti.js';
 import { Sparkles, Heart } from 'lucide-react';
 
 const getAssetUrl = (path) => {
@@ -8,7 +8,7 @@ const getAssetUrl = (path) => {
   return encodeURI(`${base}${path.replace(/^\//, '')}`);
 };
 
-export default function Envelope({ onOpen }) {
+export default function Envelope({ onOpen = () => {} }) {
   const [isOpen, setIsOpen] = useState(false);
 
   const handleOpen = (e) => {
@@ -22,16 +22,12 @@ export default function Envelope({ onOpen }) {
       window.dispatchEvent(new CustomEvent('play-wedding-music'));
     }
 
-    try {
-      confetti({
-        particleCount: 95,
-        spread: 90,
-        origin: { y: 0.6 },
-        colors: ['#D4AF37', '#F9E79F', '#C5A059', '#6c5ce7', '#160e33', '#FDFBF7']
-      });
-    } catch (err) {
-      console.warn("Confetti launch error:", err);
-    }
+    triggerConfetti({
+      particleCount: 95,
+      spread: 90,
+      origin: { y: 0.6 },
+      colors: ['#D4AF37', '#F9E79F', '#C5A059', '#6c5ce7', '#160e33', '#FDFBF7']
+    });
 
     if (onOpen) onOpen();
   };
